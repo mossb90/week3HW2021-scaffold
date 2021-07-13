@@ -6,7 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fallout Memory Game</title>
-    <!-- TODO: Connect the given styles file to this HTML -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/index.js" defer></script>
+    <!-- Linking of stylesheets and script files can be done either in the head or at the end of the body portion
+         of the .html file.  If the script src file is included in the head, the keyword defer will eleviate issues
+         associated with the loading of javascript files prior to some of its dependencies being initialized  -->
 </head>
 <body>
     <div class="container">
@@ -27,9 +31,10 @@
                 <span class="timer"><i class="fa fa-hourglass-start"></i> Timer: 00:00</span>
             </div>
             <div class="reset">
-                <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
+                <button class="btn reset-btn" >Reset <i class="fa fa-repeat"></i></button>
             </div>
         </section>
+
         <!-- Modal section-->
         <table>
             <tr class="deck"></tr>
@@ -38,9 +43,17 @@
 
     <!-- Modal -->
     <section class="win-game-modal">
-        
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="close">
+                    &times;
+                    Congratulations! <br>
+                    You have won the game and found all 8 pairs of cards. <br>
+                    <img src="./img/Vault-Boy-Thumb-Up.jpg" alt="thumbs up congrats">
+                    <button class="btn" id="play-again-btn">Play Again?</button>
+                </span>
+            </div>
+        </div>
     </section>
-
-    <!-- TODO: Connect the given JS file to your HTML -->
 </body>
 </html>

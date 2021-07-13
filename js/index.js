@@ -33,10 +33,18 @@ function shuffle(array) {
 
 // TODO: Implement this function
 function startGame() {
+  console.log("started startGame() function");
   // Invoke shuffle function and store in variable
   const shuffledDeck = shuffle(deckCards);
   // Implement a for loop on the shuffledDeck array
-  
+    for(var x; x < shuffledDeck.length; x++){
+      const tdTag = document.createElement('td');
+      tdTag.classList.add('card');
+      const addImg = document.createElement('img');
+      tdTag.appendChild(addImg);
+      addImg.setAttribute('src', './img/' + shuffledDeck[x]);
+      deck.appendChild(tdTag);
+    }
     // Create the <td> tags and assign it to a variable called tdTag
     
     // Give tdTag Element a class of card
@@ -47,9 +55,8 @@ function startGame() {
     
     // Set the addImage element src path with the shuffled deck
     // TODO: replace the REPLACE ME string with the element in the shuffledDeck array at index i
-    addImage.setAttribute('src', 'img/' + 'REPLACE ME with the element in shuffleDeck at index i');
     // Add an alt tag to the addImage element
-    addImage.setAttribute('alt', 'image of vault boy from fallout');
+    // addImage.setAttribute('alt', 'image of vault boy from fallout');
     // make the tdTag element a child of the deck element
     
 }

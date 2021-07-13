@@ -23,10 +23,13 @@ body {
     margin: 0;
     text-align: center;
 }
-/* TODO: this container class in the center of the screen using flex-direction column */
+
 .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-top: 8px;
+    background-color: lightgray;
 }
 
 ul > li {
@@ -103,7 +106,7 @@ Section - Score Panel
 }
 
 /*----------------------------------
-Section - Modal
+Section - End of Game Modal
 ------------------------------------*/
 
 /* Modal (background) */
@@ -116,12 +119,19 @@ Section - Modal
     background-color: rgb(46, 61, 73);
     /* With opacity */
     background-color: rgba(46, 61, 73, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
 /* Modal Content/Box */
-/* TODO: Style this and make it look better */
+/* flex-direction stacks flex items vertically */
 .modal-content {
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 5% auto;
     width: 80%;
 }
@@ -165,7 +175,7 @@ Deck of Cards
 ------------------------------------*/
 /*Mobile first responsiveness*/
 .deck {
-    background: #5cf;
+    background: darkgreen;
     border-radius: 24px;
     display: flex;
     flex-wrap: wrap;
