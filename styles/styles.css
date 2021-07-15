@@ -112,7 +112,7 @@ Section - End of Game Modal
 /* Modal (background) */
 .modal {
     /*Hidden by default */
-    display: block;
+    /* display: block; */
     width: 100%;
     height: 100%;
     /* Fallback color */
